@@ -28,7 +28,7 @@ void loop(){
   if(shoulder==true){
     pushVal=analogRead(push);
     joyVal=analogRead(joyX);
-    int velocity=map(joyVal, 0, 1023, -30, 30);
+    int velocity=map(joyVal, 0, 1023, -2, 2);
     joyVal += velocity;
     if(joyVal>180){joyVal=180;}
     if(joyVal<0){joyVal=0;}
@@ -37,7 +37,7 @@ void loop(){
     Serial.println(joyVal);
 
     joyVal=analogRead(joyY);
-    velocity=map(joyVal, 0, 1023, -30, 30);
+    velocity=map(joyVal, 0, 1023, -2, 2);
     joyVal += velocity;
     if(joyVal>180){joyVal=180;}
     if(joyVal<0){joyVal=0;}
@@ -52,14 +52,14 @@ void loop(){
   else{
     pushVal=analogRead(push);
     joyVal=analogRead(joyX);
-    int velocity=map(joyVal, 0, 1023, -30, 30);
+    int velocity=map(joyVal, 0, 1023, -2, 2);
     joyVal+=velocity;
     if(joyVal>115){joyVal=115;}
     if(joyVal<0){joyVal=0;}
     servo3.write(joyVal);
 
     joyVal=analogRead(joyY);
-    velocity=map(joyVal, 0, 1023, -30, 30);
+    velocity=map(joyVal, 0, 1023, -2, 2);
     if(joyVal>180){joyVal=180;}
     if(joyVal<0){joyVal=0;}
     if(pushVal==0){
