@@ -1,6 +1,5 @@
 #include <Servo.h>
 
-//define our servos
 Servo servo1;
 Servo servo2;
 Servo servo3;
@@ -29,8 +28,8 @@ void loop()
   if(shoulder==true){
     pushVal=analogRead(push);
     joyVal = analogRead(joyX);
-    joyVal = map (joyVal, 0, 1023, 0, 180); //servo value between 0-180
-    servo1.write(joyVal); //set the servo position according to the joystick value
+    joyVal = map (joyVal, 0, 1023, 0, 180);
+    servo1.write(joyVal);
     Serial.println("X");
     Serial.println(joyVal);
   
