@@ -1,6 +1,5 @@
 #include <Servo.h>
 
-//define our servos
 Servo servo1;
 Servo servo2;
 Servo servo3;
